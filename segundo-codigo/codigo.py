@@ -2,9 +2,6 @@ import openpyxl
 wb = openpyxl.load_workbook('tabela1.xlsx')
 ws = wb.active
 
-# values = [ws.cell(row=1,column=i).value for i in range(1,ws.max_column+1)]
-# print(values)
-
 periodos = {}
 tempo_execucao = {}
 prioridades = {}
@@ -14,11 +11,6 @@ for i in range(2, ws.max_row+1):
     periodos[ws.cell(row=i,column=1).value] = ws.cell(row=i,column=2).value
     tempo_execucao[ws.cell(row=i,column=1).value] = ws.cell(row=i,column=3).value
     prioridades[ws.cell(row=i,column=1).value] = ws.cell(row=i,column=4).value
-
-
-# periodos=[ws.cell(row=i,column=2).value for i in range(2, ws.max_row+1)]
-# tempo_execucao=[ws.cell(row=i,column=3).value for i in range(2, ws.max_row+1)]
-# prioridades = [ws.cell(row=i,column=4).value for i in range(2, ws.max_row+1)]
 
 tarefasPrioridade = sorted(prioridades)
 resultado = 0
