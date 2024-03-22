@@ -16,6 +16,7 @@ for i in range(quant_tarefas):
 tarefasPrioridade = sorted(tarefas_prioridade)
 resultado = 0
 print(tarefasPrioridade)
+
 #calculando a escabilidade
 for i in range(quant_tarefas):
     resultado = resultado + (tarefas_tempo[tarefasPrioridade[i]]/tarefas_intervalo[tarefasPrioridade[i]])
